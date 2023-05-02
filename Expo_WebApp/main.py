@@ -59,7 +59,7 @@ def check_interface(AS, INT):
 def main_configure(AS, INT, DES, VLAN, COS):
     while True:
         try:
-            dev = Device(host=f"10.1.252.{AS}", user='hyperadmin', password='dAJr3Ear$z#G*Y').open()
+            dev = Device(host=f"10.1.252.{AS}", user='hyperadmin', password='').open()
 
             # Check switch model 
             version = dev.cli("show version").split('\n')[4]
@@ -125,7 +125,7 @@ def main_configure(AS, INT, DES, VLAN, COS):
 def idf_cleanup(AS):
     while True:
         try:
-            dev = Device(host=f"10.1.252.{AS}", user='hyperadmin', password='dAJr3Ear$z#G*Y').open()
+            dev = Device(host=f"10.1.252.{AS}", user='hyperadmin', password='').open()
             cu = Config(dev)
 
             # Check switch model 
